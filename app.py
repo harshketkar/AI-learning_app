@@ -29,7 +29,7 @@ mail = Mail(app)
 scheduler = BackgroundScheduler()
 
 # Create the prompt template
-prompt_template = """Generate a daily learning content for Python Flask development. Include a topic header, a comprehensive summary, and 2-3 practice questions.
+prompt_template = """Generate a daily learning content for Python Flask development. Include a topic header, a comprehensive summary, and 4-5 practice questions.
 
 The content should be formatted in markdown like this:
 
