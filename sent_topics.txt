@@ -124,3 +124,35 @@ We'll explore several key aspects:
 ---
 
 ==================================================
+
+=== 2025-06-09 10:39:59 ===
+---
+**Topic:** Implementing Robust Error Handling and Logging in Flask Applications
+
+**Summary:**  Effective error handling and logging are crucial for building robust and maintainable Flask applications.  This involves gracefully handling exceptions, providing informative error messages to users, and logging detailed information for debugging and monitoring.  Poor error handling can lead to frustrating user experiences and make debugging significantly harder.  This topic covers several key aspects:
+
+* **Exception Handling with `try...except` blocks:**  Learn how to use `try...except` blocks to catch specific exceptions (e.g., `FileNotFoundError`, `HTTPError`, `TypeError`) and handle them appropriately.  This prevents your application from crashing and allows you to provide user-friendly error messages or take corrective actions.
+
+* **Custom Error Handlers in Flask:** Flask allows you to register custom error handlers for specific HTTP status codes (e.g., 404 Not Found, 500 Internal Server Error). This allows you to create consistent and informative error pages for your users, tailored to the specific error encountered.
+
+* **Logging with Python's `logging` module:**  The Python `logging` module is a powerful tool for recording events in your application. You can configure logging to write messages to files, the console, or even remote logging services.  Different log levels (DEBUG, INFO, WARNING, ERROR, CRITICAL) allow you to categorize and filter log messages effectively.  This is vital for debugging, monitoring application performance, and identifying issues in production.
+
+* **Contextual Logging:** Include relevant information like timestamps, request details (e.g., URL, method, headers), and user ID in your log messages for easier debugging and analysis.
+
+* **Best Practices:**  Avoid logging sensitive information (e.g., passwords, credit card details).  Use structured logging formats (e.g., JSON) for easier parsing and analysis.
+
+
+**Practice Questions:**
+
+1.  Write a Flask route that attempts to open a file.  Implement `try...except` blocks to handle the `FileNotFoundError` exception, returning a custom 404 error page if the file is not found.
+
+2.  Create a custom error handler in Flask for the 500 Internal Server Error status code. The handler should log the exception details using the `logging` module and display a user-friendly error message on the page, avoiding revealing sensitive information.
+
+3.  Configure the Python `logging` module to write log messages to a file named "app.log", including timestamps and log levels.  Set the logging level to `DEBUG`.
+
+4.  Explain the differences between logging to the console versus logging to a file in a Flask application, and when you might prefer one over the other.
+
+5.  How can you use structured logging (e.g., JSON logging) to improve the efficiency of analyzing log data from a production Flask application?  Provide a code example demonstrating structured logging.
+---
+
+==================================================
